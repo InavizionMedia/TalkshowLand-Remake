@@ -64,9 +64,10 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 .swiper{overflow:hidden}
 .swiper-wrapper{display:flex}
 .swiper-slide{flex-shrink:0}
-.rail-btn{position:absolute;top:34%;z-index:5;width:46px;height:64px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.55);color:#fff;font-size:18px;cursor:pointer;transition:.2s}
-.rail-btn:hover{background:var(--red);border-color:var(--red)}
-.rail-btn.prev{left:-8px}.rail-btn.next{right:-8px}
+.rail-btn{position:absolute;top:36%;transform:translateY(-50%);z-index:5;width:54px;height:54px;border:0;background:#000;color:var(--red-bright);cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center}
+.rail-btn svg{width:26px;height:26px}
+.rail-btn:hover{background:#1a1a1a}
+.rail-btn.prev{left:12px}.rail-btn.next{right:12px}
 
 /* ---------- cards ---------- */
 .card{background:var(--surface);border:1px solid var(--line);overflow:hidden;transition:transform .25s,border-color .25s}
@@ -224,7 +225,8 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 }
 @media(max-width:560px){
   .newsform{flex-direction:column;gap:12px}
-  .rail-btn{display:none}
+  .rail-btn{width:46px;height:46px}
+  .rail-btn.prev{left:8px}.rail-btn.next{right:8px}
 }
 @media(prefers-reduced-motion:reduce){
   .hero-slide{transition:none}
