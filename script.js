@@ -90,7 +90,7 @@
           prevEl: el.closest(".rail").querySelector(".rail-btn.prev")
         },
         breakpoints: {
-          0:   { slidesPerView: Math.min(perView, 1.4) },
+          0:   { slidesPerView: 1 },
           640: { slidesPerView: Math.min(perView, 2.2) },
           1024:{ slidesPerView: perView }
         }
