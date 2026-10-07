@@ -215,3 +215,19 @@
     openLb();
   });
 })();
+
+/* back-to-top button — appears after scrolling, site-wide */
+(function(){
+  var b = document.createElement("button");
+  b.className = "to-top";
+  b.setAttribute("aria-label", "Back to top");
+  b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14l6-6 6 6"/></svg>';
+  document.body.appendChild(b);
+  function onScroll(){
+    if (window.scrollY > 600) b.classList.add("show");
+    else b.classList.remove("show");
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+  b.addEventListener("click", function(){ window.scrollTo({top:0, behavior:"smooth"}); });
+})();
