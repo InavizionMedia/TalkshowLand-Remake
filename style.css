@@ -96,6 +96,12 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 .card:hover .play{background:rgba(0,0,0,.35)}
 .card .play svg{width:56px;height:56px;border-radius:50%;background:var(--red);fill:#fff;padding:14px;box-shadow:0 4px 18px rgba(0,0,0,.5);transition:.25s}
 .card:hover .play svg{transform:scale(1.08)}
+/* play buttons hidden per Jon 2026-10-07 — spans stay in the DOM as the lightbox hook */
+.card .play,.feat-player .thumb .play{display:none}
+.card .thumb::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.18);transition:background .25s;pointer-events:none}
+.card:hover .thumb::after{background:rgba(0,0,0,.35)}
+.feat-player .thumb::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.15);transition:background .2s;pointer-events:none}
+.feat-player .thumb:hover::after{background:rgba(0,0,0,.32)}
 .card-body{padding:14px 16px 18px}
 .card-tag{font-family:var(--font-head);font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--red-bright)}
 .card-body h3{font-size:.95rem;font-weight:700;margin:8px 0 4px;text-transform:none;letter-spacing:0}
@@ -316,6 +322,7 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 .feat-player .thumb .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;background:rgba(10,10,10,.55);display:flex;align-items:center;justify-content:center;transition:.2s}
 .feat-player .thumb:hover .play{background:var(--red)}
 .feat-player .thumb .play svg{width:30px;height:30px;fill:#fff;margin-left:4px}
+.feat-player .thumb .play{display:none}
 .feat-meta{display:flex;justify-content:space-between;align-items:center;max-width:1020px;margin:18px auto 0;text-align:left}
 .feat-meta h3{font-size:1.05rem}
 .feat-meta p{color:var(--muted);font-size:.92rem;margin-top:6px}
