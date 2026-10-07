@@ -357,9 +357,8 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 /* ---------- video player page ---------- */
 .vp-hero{background:#0b0b0b;padding:150px 0 0}
 .vp-player{width:100%;max-width:1020px;display:block;margin:0 auto;aspect-ratio:16/9;background:#000;border:1px solid #262626;border-radius:8px}
-.vp-ribbon{height:64px;background:linear-gradient(180deg,#d82323,#9c1212);clip-path:polygon(0 0,100% 0,100% 32%,0 100%)}
-.vp-ribbon.light{height:30px;background:#0a0a0a}
-.vp-ribbon.light::before{content:"";display:block;height:100%;background:#e2e2e2;clip-path:polygon(0 40%,100% 5%,100% 22%,0 57%)}
+.vp-ribbon{height:64px;background:linear-gradient(180deg,#e02323,rgba(150,14,14,.8));clip-path:polygon(0 0,100% 0,100% 100%,0 6%)}
+.vp-ribbon.flip{clip-path:polygon(0 0,100% 0,100% 6%,0 100%)}
 .vp-title{background:linear-gradient(100deg,rgba(10,8,8,.96) 28%,rgba(10,8,8,.55) 55%,rgba(150,14,14,.62) 100%),url('assets/thumb-7.jpg') center right/cover #0d0d0d;padding:96px 0}
 .vp-title h1{font-size:1.75rem;font-weight:800;letter-spacing:.02em;margin:0 0 20px;color:#fff}
 .vp-desc{color:#ececec;font-size:.95rem;max-width:62ch;margin:0 0 22px;line-height:1.7}
