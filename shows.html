@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shows | Talk Show Land</title>
+<meta name="description" content="Browse every Talk Show Land series — daytime, dialogue, food, game shows, news, and parenthood. Filter by category.">
+<meta name="theme-color" content="#121212">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/logo-icon.png">
+</head>
+<body>
+
+<header class="site-header solid" id="siteHeader">
+  <nav class="nav container" aria-label="Main">
+    <a class="brand" href="index.html"><img src="assets/logo-desktop.png" alt="TalkShowLand — Talk Show Land"></a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="shows.html">Shows</a></li>
+      <li><a href="dialogue.html">Dialogue</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="sports.html">Sports</a></li>
+      <li><a href="streaming.html">Streaming</a></li>
+      <li><a href="entertainment.html">Entertainment</a></li>
+      <li><a href="store.html">Store</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<div class="page-head"><div class="container">
+  <p class="kicker">The lineup</p>
+  <h1>Shows</h1>
+  <p>Every series on the network, filterable by mood. Pick a lane — daytime energy, deep dialogue, food, game shows, news that talks back, and real parenthood.</p>
+</div></div>
+
+<section class="section container" aria-label="Filter shows">
+  <div class="chips" role="group" aria-label="Filter shows by category">
+    <button class="chip active" data-filter="all">All Shows</button>
+    <button class="chip" data-filter="daytime">Daytime</button>
+    <button class="chip" data-filter="dialogue">Dialogue</button>
+    <button class="chip" data-filter="featured">Featured</button>
+    <button class="chip" data-filter="food">Food</button>
+    <button class="chip" data-filter="gameshows">Game Shows</button>
+    <button class="chip" data-filter="news">News</button>
+    <button class="chip" data-filter="parenthood">Parenthood</button>
+  </div>
+
+  <div class="filter-grid" id="filterGrid">
+    <article class="card" data-tags="daytime"><div class="thumb"><img src="assets/thumb-1.jpg" alt="Morning Blend"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Daytime</span><h3>Morning Blend</h3><p class="card-meta">Weekdays · 42 min</p></div></article>
+    <article class="card" data-tags="daytime"><div class="thumb"><img src="assets/thumb-10.jpg" alt="Daybreak Live"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Daytime</span><h3>Daybreak Live</h3><p class="card-meta">Weekdays · 60 min</p></div></article>
+    <article class="card" data-tags="dialogue"><div class="thumb"><img src="assets/thumb-2.jpg" alt="The Dialogue Hour"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Dialogue</span><h3>The Dialogue Hour</h3><p class="card-meta">Weekly · 55 min</p></div></article>
+    <article class="card" data-tags="dialogue"><div class="thumb"><img src="assets/thumb-7.jpg" alt="Real Talk Roundtable"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Dialogue</span><h3>Real Talk Roundtable</h3><p class="card-meta">Weekly · 48 min</p></div></article>
+    <article class="card" data-tags="featured daytime"><div class="thumb"><img src="assets/thumb-5.jpg" alt="Talk Show Land Tonight"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Featured · Daytime</span><h3>Talk Show Land Tonight</h3><p class="card-meta">Flagship · 60 min</p></div></article>
+    <article class="card" data-tags="featured"><div class="thumb"><img src="assets/thumb-9.jpg" alt="The Red Carpet Hour"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Featured</span><h3>The Red Carpet Hour</h3><p class="card-meta">Event series · 45 min</p></div></article>
+    <article class="card" data-tags="food"><div class="thumb"><img src="assets/thumb-3.jpg" alt="Plated"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Food</span><h3>Plated</h3><p class="card-meta">Weekly · 38 min</p></div></article>
+    <article class="card" data-tags="food"><div class="thumb"><img src="assets/thumb-4.jpg" alt="Kitchen Confessions"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Food</span><h3>Kitchen Confessions</h3><p class="card-meta">Weekly · 36 min</p></div></article>
+    <article class="card" data-tags="gameshows"><div class="thumb"><img src="assets/thumb-6.jpg" alt="Spin and Win"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Game Shows</span><h3>Spin &amp; Win</h3><p class="card-meta">Weekdays · 30 min</p></div></article>
+    <article class="card" data-tags="gameshows"><div class="thumb"><img src="assets/thumb-8.jpg" alt="The Buzzer"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Game Shows</span><h3>The Buzzer</h3><p class="card-meta">Weekly · 28 min</p></div></article>
+    <article class="card" data-tags="news"><div class="thumb"><img src="assets/thumb-5.jpg" alt="The Day Report"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">News</span><h3>The Day Report</h3><p class="card-meta">Daily · 45 min</p></div></article>
+    <article class="card" data-tags="news"><div class="thumb"><img src="assets/thumb-7.jpg" alt="Night Lights"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">News</span><h3>Night Lights</h3><p class="card-meta">Nightly · 30 min</p></div></article>
+    <article class="card" data-tags="parenthood"><div class="thumb"><img src="assets/thumb-6.jpg" alt="Raising Them Right"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Parenthood</span><h3>Raising Them Right</h3><p class="card-meta">Weekly · 40 min</p></div></article>
+    <article class="card" data-tags="parenthood dialogue"><div class="thumb"><img src="assets/thumb-10.jpg" alt="The Parent Panel"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Parenthood · Dialogue</span><h3>The Parent Panel</h3><p class="card-meta">Weekly · 44 min</p></div></article>
+  </div>
+</section>
+
+<section class="section container" aria-label="Related shows" style="padding-top:0">
+  <div class="sec-head"><h2>Related Shows</h2></div>
+  <div class="rail">
+    <div class="swiper" data-per-view="5"><div class="swiper-wrapper">
+      <div class="swiper-slide"><article class="card poster"><div class="thumb"><img src="assets/thumb-1.jpg" alt="The Dialogue Awards Show poster"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Event</span><h3>The Dialogue Awards Show</h3><p class="card-meta">Annual special</p></div></article></div>
+      <div class="swiper-slide"><article class="card poster"><div class="thumb"><img src="assets/thumb-4.jpg" alt="TSL Specials poster"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Specials</span><h3>TSL Specials</h3><p class="card-meta">Limited series</p></div></article></div>
+      <div class="swiper-slide"><article class="card poster"><div class="thumb"><img src="assets/thumb-7.jpg" alt="Talk Show Land at Night poster"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Late Night</span><h3>Talk Show Land at Night</h3><p class="card-meta">Weekly · 50 min</p></div></article></div>
+      <div class="swiper-slide"><article class="card poster"><div class="thumb"><img src="assets/thumb-9.jpg" alt="Behind the Scenes poster"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Behind the Scenes</span><h3>Behind the Scenes</h3><p class="card-meta">Weekly · 25 min</p></div></article></div>
+      <div class="swiper-slide"><article class="card poster"><div class="thumb"><img src="assets/thumb-3.jpg" alt="Red Carpets poster"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Events</span><h3>Red Carpets</h3><p class="card-meta">Event coverage</p></div></article></div>
+    </div></div>
+    <button class="rail-btn prev" aria-label="Scroll left">‹</button>
+    <button class="rail-btn next" aria-label="Scroll right">›</button>
+  </div>
+</section>
+
+<section class="section container" aria-label="Trending shows" style="padding-top:0">
+  <div class="sec-head"><h2>Trending Shows</h2></div>
+  <div class="rail">
+    <div class="swiper" data-per-view="5"><div class="swiper-wrapper">
+      <div class="swiper-slide"><article class="card small"><div class="thumb"><img src="assets/thumb-2.jpg" alt="Viral Moments"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Clips</span><h3>Viral Moments</h3><p class="card-meta">2.1M views this week</p></div></article></div>
+      <div class="swiper-slide"><article class="card small"><div class="thumb"><img src="assets/thumb-5.jpg" alt="Hot Takes"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Clips</span><h3>Hot Takes</h3><p class="card-meta">1.8M views this week</p></div></article></div>
+      <div class="swiper-slide"><article class="card small"><div class="thumb"><img src="assets/thumb-8.jpg" alt="The Morning After"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Recap</span><h3>The Morning After</h3><p class="card-meta">1.4M views this week</p></div></article></div>
+      <div class="swiper-slide"><article class="card small"><div class="thumb"><img src="assets/thumb-10.jpg" alt="Clip of the Day"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Clips</span><h3>Clip of the Day</h3><p class="card-meta">Daily · 5 min</p></div></article></div>
+      <div class="swiper-slide"><article class="card small"><div class="thumb"><img src="assets/thumb-1.jpg" alt="Fan Reacts"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Community</span><h3>Fan Reacts</h3><p class="card-meta">Weekly · 22 min</p></div></article></div>
+      <div class="swiper-slide"><article class="card small"><div class="thumb"><img src="assets/thumb-4.jpg" alt="Weekend Rewind"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Recap</span><h3>Weekend Rewind</h3><p class="card-meta">Weekly · 35 min</p></div></article></div>
+    </div></div>
+    <button class="rail-btn prev" aria-label="Scroll left">‹</button>
+    <button class="rail-btn next" aria-label="Scroll right">›</button>
+  </div>
+</section>
+
+<section class="section container" aria-label="Latest full shows" style="padding-top:0">
+  <div class="sec-head"><h2>Latest Full Shows</h2></div>
+  <div class="rail">
+    <div class="swiper" data-per-view="4"><div class="swiper-wrapper">
+      <div class="swiper-slide"><article class="card"><div class="thumb"><img src="assets/thumb-3.jpg" alt="Plated season 1 episode 24"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Food</span><h3>Plated</h3><p class="card-meta">S1 E24 · 38 min</p></div></article></div>
+      <div class="swiper-slide"><article class="card"><div class="thumb"><img src="assets/thumb-6.jpg" alt="Spin and Win season 3 episode 7"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Game Shows</span><h3>Spin &amp; Win</h3><p class="card-meta">S3 E07 · 30 min</p></div></article></div>
+      <div class="swiper-slide"><article class="card"><div class="thumb"><img src="assets/thumb-9.jpg" alt="Night Lights nightly episode"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">News</span><h3>Night Lights</h3><p class="card-meta">Nightly · 30 min</p></div></article></div>
+      <div class="swiper-slide"><article class="card"><div class="thumb"><img src="assets/thumb-2.jpg" alt="The Dialogue Hour season 2 episode 11"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Dialogue</span><h3>The Dialogue Hour</h3><p class="card-meta">S2 E11 · 55 min</p></div></article></div>
+      <div class="swiper-slide"><article class="card"><div class="thumb"><img src="assets/thumb-7.jpg" alt="Real Talk Roundtable weekly episode"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Dialogue</span><h3>Real Talk Roundtable</h3><p class="card-meta">Weekly · 48 min</p></div></article></div>
+      <div class="swiper-slide"><article class="card"><div class="thumb"><img src="assets/thumb-10.jpg" alt="Morning Blend season 1 episode 15"><span class="play"><i>▶</i></span></div><div class="card-body"><span class="card-tag">Daytime</span><h3>Morning Blend</h3><p class="card-meta">S1 E15 · 42 min</p></div></article></div>
+    </div></div>
+    <button class="rail-btn prev" aria-label="Scroll left">‹</button>
+    <button class="rail-btn next" aria-label="Scroll right">›</button>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="f-brand">
+      <img src="assets/logo-white.png" alt="TalkShowLand">
+      <p>The daytime talk-show streaming network. Real conversations, every day.</p>
+      <div class="socials">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="X">X</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="TikTok">TikTok</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="news.html">Night Lights</a></li>
+        <li><a href="entertainment.html">Red Carpets</a></li>
+        <li><a href="entertainment.html">Behind the Scenes</a></li>
+        <li><a href="entertainment.html">Talk Show Land at Night</a></li>
+        <li><a href="dialogue.html">The Dialogue Awards Show</a></li>
+        <li><a href="shows.html">TSL Specials</a></li>
+        <li><a href="index.html">Social</a></li>
+        <li><a href="streaming.html">Press</a></li>
+        <li><a href="streaming.html">Corporate</a></li>
+        <li><a href="news.html">The Talk Reporter</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Shows</h4>
+      <ul>
+        <li><a href="shows.html">All Shows</a></li>
+        <li><a href="dialogue.html">Dialogue</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="entertainment.html">Entertainment</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Watch</h4>
+      <ul>
+        <li><a href="streaming.html">How to Watch</a></li>
+        <li><a href="streaming.html">Streaming Apps</a></li>
+        <li><a href="store.html">Store</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom container">
+    <p>Copyright © 2026 Talk Show Land | Powered by <a href="index.html">Inazivion Media</a></p>
+    <p>Daytime TV Streaming Platform</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>if(typeof Swiper==="undefined"){document.write('<script src="vendor/swiper-bundle.min.js"><\/script>');}</script>
+<script src="script.js"></script>
+</body>
+</html>
