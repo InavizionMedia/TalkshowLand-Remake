@@ -27,7 +27,7 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:10px;align-items:center;gap:12px}
 .nav-toggle em{font-style:normal;font-family:var(--font-head);font-size:15px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
 .nav-toggle .bars{display:block}
-.nav-toggle .bars span{display:block;width:28px;height:2px;background:#fff;margin:7px 0;transition:.25s}
+.nav-toggle .bars span{display:block;width:28px;height:2px;background:var(--red-bright);margin:7px 0;transition:.25s}
 
 .sub-toggle{display:none}
 .sub-menu{display:none}
@@ -194,7 +194,7 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 @media(max-width:1023px){
   .site-header{overflow:visible}
   .nav{position:relative}
-  .nav-links{position:absolute;top:calc(100% + 1px);left:0;right:0;background:#0d0d0d;flex-direction:column;gap:0;max-height:0;overflow:hidden;padding:0 28px;transition:max-height .4s ease;border-bottom:1px solid transparent}
+  .nav-links{position:absolute;top:calc(100% + 1px);left:0;right:0;background:#242424;flex-direction:column;gap:0;max-height:0;overflow:hidden;padding:0 28px;transition:max-height .4s ease;border-bottom:1px solid transparent}
   .nav-links.open{max-height:560px;padding:12px 28px 20px;border-bottom-color:var(--line)}
   .nav-links>li{position:relative}
   .nav-links>li::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,rgba(200,14,12,.55),rgba(200,14,12,.04));pointer-events:none}
@@ -226,6 +226,7 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
   .sub-menu a{font-size:13px;color:var(--muted);padding:11px 0 11px 18px;letter-spacing:.12em}
   .sub-menu a:hover{color:#fff}
   .sub-menu li::after{display:none}
+  .site-header:has(.nav-links.open){background:#242424}
   .nav-toggle{display:flex}
   .nav-toggle.open .bars span:nth-child(1){transform:translateY(9px) rotate(45deg)}
   .nav-toggle.open .bars span:nth-child(2){opacity:0}
