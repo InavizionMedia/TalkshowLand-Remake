@@ -80,10 +80,12 @@
     if (typeof Swiper === "undefined") return;
     document.querySelectorAll(".rail .swiper").forEach(function(el){
       var perView = parseInt(el.getAttribute("data-per-view") || "3", 10);
+      var loop = el.getAttribute("data-loop") !== "false";
       new Swiper(el, {
         slidesPerView: perView,
         spaceBetween: 22,
-        loop: true,
+        loop: loop,
+        watchOverflow: true,
         speed: 500,
         navigation: {
           nextEl: el.closest(".rail").querySelector(".rail-btn.next"),
@@ -108,7 +110,9 @@
     var menu = document.getElementById("filterMenu");
     var value = document.getElementById("filterValue");
     var items = Array.prototype.slice.call(menu.querySelectorAll("[data-filter]"));
-    var cards = Array.prototype.slice.call(grid.querySelectorAll(".card"));
+    var slides = Array.prototype.slice.call(grid.querySelectorAll(".swiper-slide"));
+    var rail = document.getElementById("filterRail");
+    function filterSwiper(){ var el = document.getElementById("filterSwiper"); return el && el.swiper; }
     function closeMenu(){ menu.hidden = true; current.setAttribute("aria-expanded","false"); fsel.classList.remove("open"); }
     function applyFilter(f, label){
       items.forEach(function(i){
@@ -119,11 +123,12 @@
       value.textContent = label;
       grid.classList.add("fading");
       setTimeout(function(){
-        cards.forEach(function(card){
-          var tags = (card.getAttribute("data-tags") || "").split(" ");
-          var show = (f === "all") || tags.indexOf(f) !== -1;
-          card.classList.toggle("hidden", !show);
+        var match = slides.filter(function(s){
+          var tags = (s.querySelector(".card").getAttribute("data-tags") || "").split(" ");
+          return (f === "all") || tags.indexOf(f) !== -1;
         });
+        var sw = filterSwiper();
+        if (sw) { sw.removeAllSlides(); if (match.length) sw.appendSlide(match); sw.slideTo(0, 0); sw.update(); }
         grid.classList.remove("fading");
       }, 160);
     }
@@ -141,17 +146,25 @@
     });
     document.addEventListener("click", function(e){ if (!fsel.contains(e.target)) closeMenu(); });
     document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeMenu(); });
-    /* deep link: shows.html#f=<tag> preselects the filter */
-    var hm = (location.hash || "").match(/^#f=([a-z]+)$/);
-    if (hm) {
+    /* deep link: shows.html#f=<tag> preselects the filter (waits for the rail swiper) */
+    function applyHashFilter(){
+      var m = (location.hash || "").match(/^#f=([a-z]+)$/);
+      if (!m) return;
       for (var k = 0; k < items.length; k++) {
-        if (items[k].getAttribute("data-filter") === hm[1]) {
-          applyFilter(hm[1], items[k].textContent.trim());
+        if (items[k].getAttribute("data-filter") === m[1]) {
+          applyFilter(m[1], items[k].textContent.trim());
           break;
         }
       }
-      if (history.replaceState) history.replaceState(null, "", location.pathname + location.search);
     }
+    (function tryHash(n){
+      if (filterSwiper()) { applyHashFilter(); }
+      else if (n < 25) { setTimeout(function(){ tryHash(n + 1); }, 200); }
+    })(0);
+    window.addEventListener("hashchange", function(){
+      if (filterSwiper()) applyHashFilter();
+    });
+    if (/^#f=[a-z]+$/.test(location.hash) && history.replaceState) history.replaceState(null, "", location.pathname + location.search);
   }
 
   /* newsletter (honest placeholder) */
