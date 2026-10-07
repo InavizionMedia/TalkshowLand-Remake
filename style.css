@@ -80,6 +80,11 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 .rail-btn svg{width:26px;height:26px}
 .rail-btn:hover{background:#1a1a1a}
 .rail-btn.prev{left:0}.rail-btn.next{right:0}
+/* on very wide desktops the arrows sit outside the thumbnails, in the page margins — like the live site */
+@media(min-width:1880px){
+  .rail-btn.prev{left:-75px}
+  .rail-btn.next{right:-75px}
+}
 
 /* ---------- cards ---------- */
 .card{background:var(--surface);border:1px solid var(--line);overflow:hidden;transition:transform .25s,border-color .25s}
@@ -212,8 +217,9 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 
 /* ---------- responsive ---------- */
 @media(min-width:1024px){
-  .hero-content{align-items:flex-start;text-align:left;max-width:1730px}
+  .hero-content{align-items:flex-start;text-align:left;max-width:1730px;justify-content:flex-end;padding:0 24px 9vh}
   .hero-content h1{max-width:18ch}
+  .hero-dots{left:auto;right:clamp(48px,10vw,220px);transform:none}
   .page-head .container{max-width:1730px}
   .section.wide{max-width:1730px}
   .f-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;text-align:left;align-items:start}
