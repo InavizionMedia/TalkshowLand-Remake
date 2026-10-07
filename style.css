@@ -24,6 +24,10 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 .nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:6px 0;position:relative;transition:color .2s}
 .nav-links a:hover,.nav-links a.active{color:#fff}
+/* tiny red chevron on nav items with submenus (desktop only; mobile has its own toggle) */
+.nav-links .has-sub>a{display:inline-flex;align-items:center}
+.nav-chev{width:8px;height:8px;margin-left:7px;color:var(--red-bright);transition:transform .25s;flex:none}
+.nav-links .has-sub:hover .nav-chev{transform:rotate(180deg)}
 .nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--red)}
 .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:10px;align-items:center;gap:12px}
 .nav-toggle em{font-style:normal;font-family:var(--font-head);font-size:15px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
@@ -279,6 +283,7 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
   .sub-menu a:hover{color:#fff}
   .sub-menu li::after{display:none}
   .site-header:has(.nav-links.open){background:#1b1b1b}
+  .nav-chev{display:none}
   .nav-toggle{display:flex}
   .nav-toggle.open .bars span:nth-child(1){transform:translateY(9px) rotate(45deg)}
   .nav-toggle.open .bars span:nth-child(2){opacity:0}
