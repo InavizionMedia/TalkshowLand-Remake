@@ -44,11 +44,17 @@
 </header>
 
 <main>
-<div class="page-head" style="--ph:url('assets/hero-1.jpg')"><div class="container">
-  <p class="kicker">Every screen you own</p>
-  <h1>Streaming</h1>
-  <p>Talk Show Land streams everywhere you watch. Pick your platform, sign in once, and every show follows you from couch to commute.</p>
-</div></div>
+<section class="vidhero" aria-label="Streaming">
+  <video class="vidhero-bg" src="assets/streaming-hero.mp4" autoplay muted loop playsinline></video>
+  <div class="vidhero-tint"></div>
+  <div class="vidhero-shade"></div>
+  <div class="vidhero-content container">
+    <p class="kicker">Every screen you own</p>
+    <h1>Streaming</h1>
+    <p>Talk Show Land streams everywhere you watch. Pick your platform, sign in once, and every show follows you from couch to commute.</p>
+    <p><a class="btn" href="#featured">View Live</a></p>
+  </div>
+</section>
 
 <section class="section container" aria-label="Watch on your devices">
   <div class="sec-head"><h2>Watch on your devices</h2></div>
@@ -62,11 +68,12 @@
   </div>
 </section>
 
-<section class="section container" style="padding-top:0" aria-label="Web player status">
-  <div class="soon">
-    <h3>The web player is still in the shop</h3>
-    <p>Full-episode streaming on this site launches soon. Until then, catch clips and premieres on our social channels — the complete library lands here at launch, free with ads.</p>
-  </div>
+<section class="section container" id="featured" aria-label="Featured episode">
+  <div class="sec-head"><h2>Featured Episode</h2><a class="seemore" href="shows.html">All shows</a></div>
+  <article class="card feat">
+    <div class="thumb"><img src="assets/thumb-1.jpg" alt="Talk Show Land Tonight — featured episode"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span><span class="ep-tag">S1 E12</span></div>
+    <div class="card-body"><span class="card-tag">Featured · Daytime</span><h3>Talk Show Land Tonight</h3><p class="card-meta">60 min — The flagship hour: today's biggest conversations, live audience energy, and the moments everyone quotes tomorrow.</p></div>
+  </article>
 </section>
 
 <section class="section container faq" style="padding-top:0" aria-label="Streaming questions">
