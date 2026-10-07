@@ -135,9 +135,9 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 .filter-menu li{font-family:var(--font-head);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:12px 18px 12px 16px;cursor:pointer;border-left:2px solid transparent;transition:.15s}
 .filter-menu li:hover{color:#fff;background:#1f1f1f}
 .filter-menu li.active{color:#fff;border-left-color:var(--red);background:#1f1f1f}
-.filter-grid{transition:opacity .15s}
+.filter-grid .swiper-slide{transition:opacity .15s}
 #filterRail{margin-top:6px}
-.filter-grid.fading{opacity:0}
+.filter-grid.fading .swiper-slide{opacity:0}
 
 
 /* ---------- newsletter ---------- */
@@ -173,8 +173,8 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 
 /* ---------- subpages ---------- */
 .page-head{position:relative;overflow:hidden;padding:170px 0 60px;border-bottom:1px solid var(--line)}
-.page-head::before{content:"";position:absolute;inset:0;background-image:linear-gradient(180deg,rgba(18,18,18,.62) 0%,rgba(18,18,18,.9) 100%),var(--ph);background-size:cover;background-position:center}
-.page-head::after{content:"";position:absolute;inset:0;background:#a00807;mix-blend-mode:multiply;opacity:.38;pointer-events:none}
+.page-head::before{content:"";position:absolute;inset:-36px;background-image:var(--ph);background-size:cover;background-position:center;filter:blur(26px) brightness(.5)}
+.page-head::after{content:"";position:absolute;inset:0;background-image:linear-gradient(180deg,rgba(18,18,18,.62) 0%,rgba(18,18,18,.9) 100%),linear-gradient(180deg,rgba(160,8,7,.3),rgba(160,8,7,.3)),var(--ph);background-size:cover,cover,auto 138%;background-position:center,center,center;background-repeat:no-repeat;pointer-events:none}
 .page-head .container{position:relative;z-index:2}
 .page-head .kicker{font-family:var(--font-head);font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--red-bright);margin-bottom:14px}
 .page-head h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800}
@@ -429,3 +429,14 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 #filterGrid .swiper-slide{height:auto}
 
 .sec-head h2.upper{text-transform:uppercase}
+
+.sec-head.center{flex-direction:column;align-items:center;text-align:center}
+.sec-chev{width:28px;height:28px;color:var(--red-bright);margin-top:10px}
+.faq summary{list-style:none;display:flex;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"";flex:none;width:0;height:0;border-left:8px solid var(--red-bright);border-top:6px solid transparent;border-bottom:6px solid transparent;margin-right:14px;transition:transform .25s}
+.faq details[open] summary::before{transform:rotate(90deg)}
+
+.plat{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;transition:border-color .25s}
+.plat svg{width:34px;height:34px;stroke:var(--red-bright);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.plat:hover{border-color:var(--red-bright)}
