@@ -42,6 +42,7 @@
   var page = (location.pathname.split("/").pop() || "index.html").toLowerCase();
   document.querySelectorAll(".nav-links a").forEach(function(a){
     if (a.getAttribute("href").toLowerCase() === page) a.classList.add("active");
+    if (page === "video-player.html" && a.getAttribute("href").toLowerCase() === "streaming.html") a.classList.add("active");
   });
 
   /* hero slider */
