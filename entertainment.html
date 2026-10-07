@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261007o">
+<link rel="stylesheet" href="style.css?v=20261007p">
 <link rel="icon" href="assets/logo-icon.png">
 </head>
 <body>
@@ -57,74 +57,98 @@
 <div class="page-head" style="--ph:url('assets/thumb-8.jpg')"><div class="container">
   <p class="kicker">After the applause</p>
   <h1>Entertainment</h1>
-  <p>Red carpets, big premieres, and the after-show. Our entertainment desk goes where the lights are brightest — then sticks around for what happens after.</p>
+  <hr class="rule">
+  <p>Red carpets, big premieres, and the after-show. Our entertainment desk goes where the lights are brightest &mdash; then sticks around for what happens after.</p>
+  <p><a class="btn btn-red" href="shows.html">View More</a></p>
 </div></div>
 
-<section class="section container prose">
-  <div class="split">
-    <div>
-      <h2>Red Carpets</h2>
-      <p>Premieres, award nights, and opening weekends — covered front-row and talked through the next morning. Who wore it best is the least interesting question we ask.</p>
-      <p>Then <strong>Talk Show Land at Night</strong> takes over: the late show with the day's leftovers, the week's winners, and guests who only come out after dark.</p>
-      <p><a class="btn" href="shows.html">Browse Shows</a></p>
+<section class="section feat-ep" aria-label="Featured episode">
+  <div class="container">
+    <p class="kicker">Featured</p>
+    <h2>Featured Episode</h2>
+    <hr class="rule center">
+    <p>Premieres, award nights, and opening weekends &mdash; covered front-row and talked through the next morning.</p>
+    <div class="feat-player">
+      <div class="thumb"><img src="assets/thumb-8.jpg" alt="Red Carpets"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
     </div>
-    <img src="assets/thumb-8.jpg" alt="Red Carpets — premiere coverage">
+    <div class="feat-meta">
+      <div><p class="tag">Event series</p><h3>Red Carpets</h3><p>Event series &middot; Front-row premiere coverage.</p></div>
+    </div>
   </div>
 </section>
 
-<section class="section container" style="padding-top:0" aria-label="Entertainment programs">
-  <div class="sec-head"><h2>Entertainment Programs</h2></div>
-  <div class="showlist">
-    <div class="showrow">
-      <img src="assets/thumb-8.jpg" alt="Red Carpets">
-      <div><h3>Red Carpets</h3><p class="meta">Event series · Front-row premiere coverage.</p></div>
-      <a class="btn" href="shows.html">View</a>
+<section class="split-white" aria-label="About Entertainment">
+  <div class="split">
+    <div>
+      <h2>We Imagine Everything</h2>
+      <hr class="rule">
+      <p>From the first camera flash to the last after-party, our entertainment unit lives inside the moments everyone talks about tomorrow. Red carpets, junkets, premieres &mdash; if it&rsquo;s lit, we&rsquo;re there.</p>
     </div>
-    <div class="showrow">
-      <img src="assets/thumb-7.jpg" alt="Talk Show Land at Night">
-      <div><h3>Talk Show Land at Night</h3><p class="meta">Weekly · 50 min · The late show, TSL style.</p></div>
-      <a class="btn" href="shows.html">View</a>
+    <img src="assets/thumb-7.jpg" alt="Entertainment in the field">
+  </div>
+</section>
+
+<section class="gal4" aria-label="Entertainment gallery">
+    <figure><img src="assets/thumb-8.jpg" alt="Red Carpets"><figcaption>Red Carpets</figcaption></figure>
+    <figure><img src="assets/thumb-7.jpg" alt="At Night"><figcaption>At Night</figcaption></figure>
+    <figure><img src="assets/thumb-4.jpg" alt="Behind the Scenes"><figcaption>Behind the Scenes</figcaption></figure>
+    <figure><img src="assets/thumb-9.jpg" alt="TSL Specials"><figcaption>TSL Specials</figcaption></figure>
+</section>
+
+<section class="section covered" aria-label="Coverage">
+  <div class="container">
+    <h2>We Got You Covered</h2>
+    <hr class="rule center">
+    <div class="covered-grid">
+      <div class="covered-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z" fill="currentColor" stroke="none"/></svg><h3>Red Carpets</h3><p>Front-row access to premieres, award shows, and opening weekends.</p></div>
+      <div class="covered-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v14M17 5v14M3 10h4M3 14h4M17 10h4M17 14h4"/></svg><h3>At Night</h3><p>The late show with the day&rsquo;s leftovers &mdash; and guests who only come out after dark.</p></div>
+      <div class="covered-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg><h3>Specials</h3><p>Limited-run event television. The nights the whole network shows up for.</p></div>
     </div>
-    <div class="showrow">
-      <img src="assets/thumb-4.jpg" alt="Behind the Scenes">
-      <div><h3>Behind the Scenes</h3><p class="meta">Weekly · 25 min · How the shows get made.</p></div>
-      <a class="btn" href="shows.html">View</a>
-    </div>
-    <div class="showrow">
-      <img src="assets/thumb-9.jpg" alt="TSL Specials">
-      <div><h3>TSL Specials</h3><p class="meta">Limited series · Event television, done right.</p></div>
-      <a class="btn" href="shows.html">View</a>
-    </div>
+  </div>
+</section>
+
+<section class="cta-band" style="--cta:url('assets/thumb-1.jpg')" aria-label="Special offer">
+  <div class="container">
+    <h2>Get 30% Off Your First Video</h2>
+    <hr class="rule center">
+    <p>New to the network? Take 30% off your first video download &mdash; full episodes, specials, and exclusives, yours to keep.</p>
+    <p><a class="btn btn-red" href="shows.html">View More</a></p>
   </div>
 </section>
 </main>
 
 <footer class="site-footer">
-  <div class="container f-sub" id="newsband">
-    <h2>Subscribe Now!</h2>
-    <form class="newsform" id="newsForm">
-      <input type="email" name="email" placeholder="Email" aria-label="Email address" required>
-      <button type="submit">Sign up</button>
-    </form>
-    <p class="news-ok">Thanks &mdash; you&rsquo;re on the list.</p>
+  <div class="container f-grid">
+    <div class="f-sub" id="newsband">
+      <h2>Subscribe Now!</h2>
+      <form class="newsform" id="newsForm">
+        <input type="email" name="email" placeholder="Email" aria-label="Email address" required>
+        <button type="submit">Sign up</button>
+      </form>
+      <p class="news-ok">Thanks &mdash; you&rsquo;re on the list.</p>
+    </div>
+    <nav class="f-links" aria-label="Quick links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="news.html">Night Lights <span>(Red Carpets)</span></a></li>
+        <li><a href="entertainment.html">all the behind scenes</a></li>
+        <li><a class="on" href="entertainment.html">Talk Show Land at Night</a></li>
+        <li><a href="dialogue.html">The Dialogue Awards Show</a></li>
+        <li><a href="shows.html">TSL Specials</a></li>
+      </ul>
+    </nav>
+    <nav class="f-links f-links2" aria-label="More links">
+      <ul>
+        <li><a href="index.html">Social</a></li>
+        <li><a href="streaming.html">Press</a></li>
+        <li><a href="streaming.html">Corporate</a></li>
+        <li><a href="news.html">The Talk Reporter</a></li>
+      </ul>
+    </nav>
   </div>
-  <nav class="container f-links" aria-label="Quick links">
-    <h4>Quick Links</h4>
-    <ul>
-      <li><a href="news.html">Night Lights <span>(Red Carpets)</span></a></li>
-      <li><a href="entertainment.html">all the behind scenes</a></li>
-      <li><a class="on" href="entertainment.html">Talk Show Land at Night</a></li>
-      <li><a href="dialogue.html">The Dialogue Awards Show</a></li>
-      <li><a href="shows.html">TSL Specials</a></li>
-      <li><a href="index.html">Social</a></li>
-      <li><a href="streaming.html">Press</a></li>
-      <li><a href="streaming.html">Corporate</a></li>
-      <li><a href="news.html">The Talk Reporter</a></li>
-    </ul>
-  </nav>
   <div class="f-bottom container">
     <p>Copyright &copy; 2026 Talk Show Land | Powered by <span>Inazivion Media</span></p>
-    </div>
+  </div>
 <div class="container f-social">
     <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V7c0-.8.2-1.2 1.3-1.2H17V3h-2.6C11.7 3 11 4.8 11 7v1.5H9V12h2v9h3v-9h2.3l.4-3.5H14z"/></svg></a>
     <a href="#" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.7 3H21l-7.3 8.3L22 21h-6.8l-5.3-6.2L3.8 21H.5l7.8-8.9L1.5 3h7l4.8 5.7 4.4-5.7zm-1.2 16h1.9L7.1 4.9H5L16.5 19z"/></svg></a>
@@ -133,9 +157,8 @@
     <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12s0-3.3-.4-4.8c-.2-.9-.9-1.6-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.7 2 12 2 12s0 3.3.4 4.8c.2.9.9 1.6 1.8 1.8 1.5.4 7.8.4 7.8.4s6.3 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.5.4-4.8.4-4.8zM10 15.5v-7l6 3.5-6 3.5z"/></svg></a>
     <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.6L2.7 12.1c-.8.3-.8 1.4.1 1.6l4.8 1.5 1.8 5.6c.3.8 1.3.9 1.8.2l2.6-2.9 5 3.7c.6.5 1.6.1 1.8-.7l3.1-14.6c.2-1-.9-1.9-1.8-1.9zM8.6 13.6l9.8-6.4c.2-.1.4.1.3.3l-8.1 7.4-.3 3-1.7-4.3z"/></svg></a>
   </div>
-  </div>
 </footer>
 
-<script src="script.js?v=20261007g"></script>
+<script src="script.js?v=20261007h"></script>
 </body>
 </html>
