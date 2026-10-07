@@ -90,28 +90,47 @@
   if (document.readyState === "complete") initRails();
   else window.addEventListener("load", initRails);
 
-  /* shows filter — exclusive chips, 300ms fade */
-  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip[data-filter]"));
+  /* shows filter — dropdown, exclusive, 300ms fade */
+  var fsel = document.getElementById("filterSelect");
   var grid = document.getElementById("filterGrid");
-  if (chips.length && grid) {
+  if (fsel && grid) {
+    var current = document.getElementById("filterCurrent");
+    var menu = document.getElementById("filterMenu");
+    var value = document.getElementById("filterValue");
+    var items = Array.prototype.slice.call(menu.querySelectorAll("[data-filter]"));
     var cards = Array.prototype.slice.call(grid.querySelectorAll(".card"));
-    chips.forEach(function(chip){
-      chip.addEventListener("click", function(){
-        if (chip.classList.contains("active")) return;
-        chips.forEach(function(c){ c.classList.remove("active"); });
-        chip.classList.add("active");
-        var f = chip.getAttribute("data-filter");
-        grid.classList.add("fading");
-        setTimeout(function(){
-          cards.forEach(function(card){
-            var tags = (card.getAttribute("data-tags") || "").split(" ");
-            var show = (f === "all") || tags.indexOf(f) !== -1;
-            card.classList.toggle("hidden", !show);
-          });
-          grid.classList.remove("fading");
-        }, 160);
+    function closeMenu(){ menu.hidden = true; current.setAttribute("aria-expanded","false"); fsel.classList.remove("open"); }
+    function applyFilter(f, label){
+      items.forEach(function(i){
+        var on = i.getAttribute("data-filter") === f;
+        i.classList.toggle("active", on);
+        i.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      value.textContent = label;
+      grid.classList.add("fading");
+      setTimeout(function(){
+        cards.forEach(function(card){
+          var tags = (card.getAttribute("data-tags") || "").split(" ");
+          var show = (f === "all") || tags.indexOf(f) !== -1;
+          card.classList.toggle("hidden", !show);
+        });
+        grid.classList.remove("fading");
+      }, 160);
+    }
+    current.addEventListener("click", function(e){
+      e.stopPropagation();
+      var open = menu.hidden;
+      if (open) { menu.hidden = false; current.setAttribute("aria-expanded","true"); fsel.classList.add("open"); }
+      else closeMenu();
+    });
+    items.forEach(function(item){
+      item.addEventListener("click", function(){
+        applyFilter(item.getAttribute("data-filter"), item.textContent.trim());
+        closeMenu();
       });
     });
+    document.addEventListener("click", function(e){ if (!fsel.contains(e.target)) closeMenu(); });
+    document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeMenu(); });
   }
 
   /* newsletter (honest placeholder) */
