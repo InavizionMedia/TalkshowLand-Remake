@@ -240,8 +240,8 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 @media(max-width:1023px){
   .site-header{overflow:visible}
   .nav{position:relative}
-  .nav-links{position:absolute;top:calc(100% + 1px);left:0;right:0;background:#242424;flex-direction:column;gap:0;max-height:0;overflow:hidden;padding:0 28px;transition:max-height .4s ease;border-bottom:1px solid transparent}
-  .nav-links.open{max-height:560px;padding:12px 28px 20px;border-bottom-color:var(--line)}
+  .nav-links{position:absolute;top:calc(100% + 1px);left:0;right:0;background:linear-gradient(180deg,#1b1b1b 0%,#0c0c0c 100%);flex-direction:column;gap:0;max-height:0;overflow:hidden;padding:0 28px;transition:max-height .4s ease;border-bottom:1px solid transparent}
+  .nav-links.open{max-height:calc(100dvh - 76px);overflow-y:auto;padding:12px 28px 20px;border-bottom-color:var(--line)}
   .nav-links>li{position:relative}
   .nav-links>li::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,rgba(200,14,12,.55),rgba(200,14,12,.04));pointer-events:none}
   .nav-links>li:last-child::after{display:none}
@@ -272,7 +272,7 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
   .sub-menu a{font-size:13px;color:var(--muted);padding:11px 0 11px 18px;letter-spacing:.12em}
   .sub-menu a:hover{color:#fff}
   .sub-menu li::after{display:none}
-  .site-header:has(.nav-links.open){background:#242424}
+  .site-header:has(.nav-links.open){background:#1b1b1b}
   .nav-toggle{display:flex}
   .nav-toggle.open .bars span:nth-child(1){transform:translateY(9px) rotate(45deg)}
   .nav-toggle.open .bars span:nth-child(2){opacity:0}
