@@ -14,13 +14,13 @@
 
 ## Screenshots
 
-![Hero — dark cinematic slider with red wash](media/hero.jpg?v=20261007a)
+![Hero — dark cinematic slider with red wash](media/hero.jpg?v=20261007c)
 *Dark cinematic hero: Jon's camera/mixer art, red multiply wash, 3-slide slider.*
 
-![Shows page — 8-chip filter system](media/screenshot-shows.jpg?v=20261007a)
+![Shows page — 8-chip filter system](media/screenshot-shows.jpg?v=20261007c)
 *Shows page: exclusive 8-chip filter system with the thumbnail size ladder kept.*
 
-![Mobile — 390px](media/screenshot-mobile.jpg?v=20261007a)
+![Mobile — 390px](media/screenshot-mobile.jpg?v=20261007c)
 *390px mobile: hamburger nav, stacked hero, swipeable rails.*
 
 ## What's inside
