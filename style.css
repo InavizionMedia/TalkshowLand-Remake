@@ -55,7 +55,7 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 .hero-arrow.prev{left:14px}.hero-arrow.next{right:14px}
 
 /* ---------- sections / rails ---------- */
-.section{padding:72px 0}
+.section{padding-top:72px;padding-bottom:72px}
 .sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:26px;gap:16px}
 .sec-head h2{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:800}
 .sec-head .more{font-family:var(--font-head);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
@@ -215,7 +215,9 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
   .nav-toggle.open .bars span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
   .split{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
-  .hero-arrow{display:none}
+  .hero-arrow{display:block;font-size:30px;padding:8px}
+  .hero-arrow.prev{left:2px}
+  .hero-arrow.next{right:2px}
   .showrow{grid-template-columns:1fr;gap:12px}
   .showrow img{width:100%}
 }
