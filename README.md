@@ -14,7 +14,14 @@
 
 ## Screenshots
 
-*Recon in progress — screenshots land with the first working build.*
+![Hero — dark cinematic slider with red wash](media/hero.jpg?v=20261007a)
+*Dark cinematic hero: Jon's camera/mixer art, red multiply wash, 3-slide slider.*
+
+![Shows page — 8-chip filter system](media/screenshot-shows.jpg?v=20261007a)
+*Shows page: exclusive 8-chip filter system with the thumbnail size ladder kept.*
+
+![Mobile — 390px](media/screenshot-mobile.jpg?v=20261007a)
+*390px mobile: hamburger nav, stacked hero, swipeable rails.*
 
 ## What's inside
 
@@ -23,7 +30,7 @@
 
 ## Design language
 
-Carries over from the live temp site per Jon: the existing hero slideshow + hero art he made, and the top-left navbar logo. Full design lock after recon.
+Dark cinematic streaming-service look: near-black (#121212) canvas, white uppercase Montserrat headlines, dark-red (#a00807) accent, thin outlined buttons. Jon's hero art with the red multiply wash, transparent TSL logo top-left. Eight pages sharing one stylesheet.
 
 ## Tech stack
 
