@@ -16,8 +16,8 @@ a{color:inherit;text-decoration:none}
 h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.15;letter-spacing:.02em}
 
 /* ---------- header ---------- */
-.site-header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,box-shadow .3s;background:transparent}
-.site-header.scrolled,.site-header.solid{background:rgba(10,10,10,.94);box-shadow:0 1px 0 var(--line)}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,box-shadow .3s;background:rgba(10,10,10,.9)}
+.site-header.scrolled,.site-header.solid{background:rgba(10,10,10,.96);box-shadow:0 1px 0 var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
 .brand img{height:38px;width:auto}
 .nav-links{display:flex;gap:28px;list-style:none}
@@ -28,6 +28,9 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 .nav-toggle em{font-style:normal;font-family:var(--font-head);font-size:15px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
 .nav-toggle .bars{display:block}
 .nav-toggle .bars span{display:block;width:28px;height:2px;background:#fff;margin:7px 0;transition:.25s}
+
+.sub-toggle{display:none}
+.sub-menu{display:none}
 
 /* ---------- hero ---------- */
 .hero{position:relative;height:100svh;min-height:620px;max-height:980px;overflow:hidden;background:#000}
@@ -175,15 +178,41 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
   .site-header{overflow:visible}
   .nav{position:relative}
   .nav-links{position:absolute;top:calc(100% + 1px);left:0;right:0;background:#0d0d0d;flex-direction:column;gap:0;max-height:0;overflow:hidden;padding:0 28px;transition:max-height .4s ease;border-bottom:1px solid transparent}
-  .nav-links.open{max-height:480px;padding:12px 28px 20px;border-bottom-color:var(--line)}
-  .nav-links a{display:block;padding:15px 0;font-size:15px;color:#fff;border-bottom:1px solid #1c1c1c}
+  .nav-links.open{max-height:560px;padding:12px 28px 20px;border-bottom-color:var(--line)}
+  .nav-links>li{position:relative}
+  .nav-links>li::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,rgba(200,14,12,.55),rgba(200,14,12,.04));pointer-events:none}
+  .nav-links>li:last-child::after{display:none}
+  .nav-links a{display:block;padding:15px 0;font-size:15px;color:#fff;border-bottom:0}
   .nav-links a:last-child{border-bottom:0}
   .nav-links a.active::after{display:none}
   .nav-links a.active{color:var(--red-bright)}
+  /* staggered entrance */
+  .nav-links.open>li{animation:mIn .38s cubic-bezier(.2,.7,.3,1) both}
+  .nav-links.open>li:nth-child(1){animation-delay:.03s}
+  .nav-links.open>li:nth-child(2){animation-delay:.07s}
+  .nav-links.open>li:nth-child(3){animation-delay:.11s}
+  .nav-links.open>li:nth-child(4){animation-delay:.15s}
+  .nav-links.open>li:nth-child(5){animation-delay:.19s}
+  .nav-links.open>li:nth-child(6){animation-delay:.23s}
+  .nav-links.open>li:nth-child(7){animation-delay:.27s}
+  @keyframes mIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+  /* submenu */
+  .sub-toggle{display:inline-flex}
+  .sub-menu{display:block}
+  .has-sub{position:relative}
+  .sub-toggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;background:none;border:0;color:var(--muted);cursor:pointer;position:absolute;right:0;top:6px}
+  .sub-toggle svg{width:18px;height:18px;transition:transform .3s}
+  .has-sub.open .sub-toggle{color:var(--red-bright)}
+  .has-sub.open .sub-toggle svg{transform:rotate(180deg)}
+  .sub-menu{list-style:none;max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .has-sub.open .sub-menu{max-height:320px}
+  .sub-menu a{font-size:13px;color:var(--muted);padding:11px 0 11px 18px;letter-spacing:.12em}
+  .sub-menu a:hover{color:#fff}
+  .sub-menu li::after{display:none}
   .nav-toggle{display:flex}
-  .nav-toggle.open .bars span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  .nav-toggle.open .bars span:nth-child(1){transform:translateY(9px) rotate(45deg)}
   .nav-toggle.open .bars span:nth-child(2){opacity:0}
-  .nav-toggle.open .bars span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+  .nav-toggle.open .bars span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
   .split{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
   .hero-arrow{display:none}
