@@ -67,7 +67,7 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 .rail-btn{position:absolute;top:36%;transform:translateY(-50%);z-index:5;width:54px;height:54px;border:0;background:#000;color:var(--red-bright);cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center}
 .rail-btn svg{width:26px;height:26px}
 .rail-btn:hover{background:#1a1a1a}
-.rail-btn.prev{left:12px}.rail-btn.next{right:12px}
+.rail-btn.prev{left:0}.rail-btn.next{right:0}
 
 /* ---------- cards ---------- */
 .card{background:var(--surface);border:1px solid var(--line);overflow:hidden;transition:transform .25s,border-color .25s}
@@ -83,6 +83,13 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 .card-tag{font-family:var(--font-head);font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--red-bright)}
 .card-body h3{font-size:.95rem;font-weight:700;margin:8px 0 4px;text-transform:none;letter-spacing:0}
 .card-meta{font-size:.78rem;color:var(--faint)}
+/* rails mirror the live site: borderless image, title + date on the background */
+.rail .card{background:none;border:0;overflow:visible}
+.rail .card:hover{transform:none}
+.rail .card-tag{display:none}
+.rail .card-body{padding:20px 4px 0}
+.rail .card-body h3{font-size:1.05rem;font-weight:600;margin:0 0 6px}
+.rail .card-meta{font-size:.95rem}
 .card.poster .thumb{aspect-ratio:212/375}
 .card.small .thumb{aspect-ratio:208/161}
 
@@ -226,7 +233,7 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 @media(max-width:560px){
   .newsform{flex-direction:column;gap:12px}
   .rail-btn{width:46px;height:46px}
-  .rail-btn.prev{left:8px}.rail-btn.next{right:8px}
+  .rail-btn.prev{left:0}.rail-btn.next{right:0}
 }
 @media(prefers-reduced-motion:reduce){
   .hero-slide{transition:none}
