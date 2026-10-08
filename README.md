@@ -2,7 +2,7 @@
 
 > Cinematic remake of [talkshowland.com](https://talkshowland.com/home/) — Yolando's TalkshowLand talk show site. Same cinematic grammar as the EveryWayWoman remake, its own unique voice.
 
-**Branch policy:** work happens on the latest *-vN / project branch. List branches before editing. Never assume the GitHub default is the working line. Working line: `talkshowland-v1` (GitHub default is `main`).
+**Branch policy:** work happens on the latest *-vN / project branch. List branches before editing. Never assume the GitHub default is the working line. Working line: `talkshowland-v4` (GitHub default is `main`).
 
 [![Preview](https://img.shields.io/badge/Preview-Live-brightgreen)](https://inavizionmedia.github.io/TalkshowLand-Remake/)
 [![Pages](https://img.shields.io/badge/GitHub_Pages-deployed-blue)](https://inavizionmedia.github.io/TalkshowLand-Remake/)
@@ -14,14 +14,14 @@
 
 ## Screenshots
 
-![Hero — dark cinematic slider with red wash](media/hero.jpg?v=20261007j)
+![Hero — dark cinematic slider with red wash](media/hero.jpg?v=20261007k)
 *Dark cinematic hero: Jon's camera/mixer art, red multiply wash, 3-slide slider.*
 
-![Shows page — bordered browse cards and rails](media/screenshot-shows.jpg?v=20261007j)
-![Streaming — FAQ with red kicker, title and rule](media/screenshot-streaming.jpg?v=20261007j)
+![Shows page — bordered browse cards and rails](media/screenshot-shows.jpg?v=20261007k)
+![Streaming — FAQ with red kicker, title and rule](media/screenshot-streaming.jpg?v=20261007k)
 *Shows page: exclusive 8-chip filter system with the thumbnail size ladder kept.*
 
-![Mobile — 390px](media/screenshot-mobile.jpg?v=20261007j)
+![Mobile — 390px](media/screenshot-mobile.jpg?v=20261007k)
 *390px mobile: hamburger nav, stacked hero, swipeable rails.*
 
 ## What's inside
