@@ -19,7 +19,7 @@
 
 ![Shows page — bordered browse cards and rails](media/screenshot-shows.jpg?v=20261007k)
 ![Streaming — FAQ with red kicker, title and rule](media/screenshot-streaming.jpg?v=20261007k)
-*Shows page: exclusive 8-chip filter system with the thumbnail size ladder kept.*
+*Shows page: dropdown-filtered ALL SHOWS catalog — bordered cards with red category tags, plus the Related Shows portrait rail.*
 
 ![Mobile — 390px](media/screenshot-mobile.jpg?v=20261007k)
 *390px mobile: hamburger nav, stacked hero, swipeable rails.*
@@ -58,4 +58,5 @@ TalkshowLand-Remake/
 ## Branches — not overwrites
 
 - `main` — landing ground, deploys to Pages
-- `talkshowland-v1` — active working line
+- `talkshowland-v4` — active working line
+- `talkshowland-v3`, `talkshowland-v2`, `talkshowland-v1` — frozen restore points
