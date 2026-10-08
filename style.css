@@ -110,15 +110,15 @@ h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.
 .feat-player .thumb:hover::after{background:rgba(0,0,0,.32)}
 .card-body{padding:14px 16px 18px}
 .card-tag{font-family:var(--font-head);font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--red-bright)}
-.card-body h3{font-size:.95rem;font-weight:700;margin:8px 0 4px;text-transform:none;letter-spacing:0}
-.card-meta{font-size:.78rem;color:var(--faint)}
+.card-body h3{font-family:'Mulish','Open Sans',Arial,sans-serif;font-size:16px;font-weight:700;margin:10px 0 5px;text-transform:uppercase;letter-spacing:.5px;color:#fff}
+.card-meta{font-family:'Mulish','Open Sans',Arial,sans-serif;font-size:14px;font-weight:700;color:#707070}
 /* rails mirror the live site: borderless image, title + date on the background */
 .rail .card{background:none;border:0;overflow:visible}
 .rail .card:hover{transform:none}
 .rail .card-tag{display:none}
 .rail .card-body{padding:20px 4px 0}
-.rail .card-body h3{font-size:1.05rem;font-weight:600;margin:0 0 6px}
-.rail .card-meta{font-size:.95rem}
+
+
 .card.poster .thumb{aspect-ratio:3/4}
 .card.small .thumb{aspect-ratio:16/9}
 
